@@ -83,7 +83,7 @@ class GMM:
         self.sigma = []
         for k in range(self.K):
             Nk = np.sum(gamma[k, :])
-            self.pi.append(Nk / len(X))
+            self.pi.append(Nk / N)
             self.mu.append(np.dot(gamma[k, :], X) / Nk)
             self.sigma.append(np.dot(gamma[k, :] * (X - self.mu[k]).T, X - self.mu[k]) / Nk)
         log_llh = self.calc_log_likelihood(X)
