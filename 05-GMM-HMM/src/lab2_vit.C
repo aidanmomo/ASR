@@ -93,7 +93,6 @@ double viterbi(const Graph& graph, const matrix<double>& gmmProbs,
   //
   //  The code for calculating the final probability and
   //  the best path is provided for you below.
-  // assert(graph.get_state_count() == stateCnt);
 
   // 1.Init chart
   for (int frmIdx = 0; frmIdx <= frmCnt; ++frmIdx) {
